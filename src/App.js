@@ -72,7 +72,7 @@ const App = () => {
 
     useEffect(() => {
         const gravity = setInterval(() => {
-            setBirdPosition((prev) => ({ ...prev, y: prev.y + 5 }));
+            setBirdPosition((prev) => ({ ...prev, y: prev.y + 15 }));
             checkCollision();
         }, 30);
 
