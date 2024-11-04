@@ -14,7 +14,7 @@ const App = () => {
 
     const jump = () => {
         if (!gameOver && gameStarted) {
-            setBirdPosition((prev) => ({ ...prev, y: prev.y - 60 }));
+            setBirdPosition((prev) => ({ ...prev, y: prev.y - 80 }));
         } else if (!gameOver && !gameStarted) {
             // Start the game on the first jump
             setGameStarted(true);
@@ -72,7 +72,7 @@ const App = () => {
 
     useEffect(() => {
         const gravity = setInterval(() => {
-            setBirdPosition((prev) => ({ ...prev, y: prev.y + 15 }));
+            setBirdPosition((prev) => ({ ...prev, y: prev.y + 5 }));
             checkCollision();
         }, 30);
 
